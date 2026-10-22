@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examen Práctico: Tinkercad Codeblocks</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans min-h-screen py-8 px-4">
+
+  <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
+
+    <!-- Encabezado -->
+    <header class="bg-gradient-to-r from-blue-700 to-indigo-800 text-white p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-2">
+        <i class="fa-solid fa-cube text-2xl text-blue-300"></i>
+        <span class="text-xs font-semibold tracking-wider uppercase bg-blue-900/60 px-3 py-1 rounded-full border border-blue-400/30">
+          Evaluación Práctica Guiada
+        </span>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Modelado 3D en Tinkercad Codeblocks</h1>
+      <p class="text-blue-100 text-sm mt-1">Completa cada fase del código apoyándote en las capturas de referencia, responde el análisis y entrega tu archivo final.</p>
+    </header>
+
+    <form id="examForm" class="p-6 sm:p-8 space-y-6">
+
+      <!-- Datos del Alumno -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-slate-50 p-4 rounded-xl border border-slate-200">
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Nombre Completo *</label>
+          <input type="text" id="studentName" required placeholder="Nombre del alumno"
+            class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-blue-600 outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Grado / Sección *</label>
+          <input type="text" id="studentGrade" required placeholder="Ej. 9° Grado A"
+            class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-blue-600 outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Fecha</label>
+          <input type="date" id="examDate"
+            class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-blue-600 outline-none">
+        </div>
+      </div>
+
+      <!-- Fase 1 -->
+      <section class="border border-slate-200 rounded-xl p-5 hover:border-blue-400 transition bg-white space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="text-base font-bold text-slate-800 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-black">1</span>
+            Fase 1: Base y relieve de la suela
+          </h2>
+          <span class="bg-blue-100 text-blue-800 text-xs font-extrabold px-3 py-1 rounded-full">20%</span>
+        </div>
+
+        <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5 list-disc list-inside bg-slate-50 p-3.5 rounded-lg border border-slate-100">
+          <li>Inserta 6 prismas rectangulares (W: 3, L: 25, H: 3) con traslación en Z: 1.3 en los ejes X: 0, 30, 20, 10, -10 y -20.</li>
+          <li><strong>Talón:</strong> Cilindro (Radius: 15, H: 2) trasladado a X: -18, Y: 0, Z: 2[cite: 1].</li>
+          <li><strong>Centro:</strong> Prisma (W: 40, L: 28, H: 2) trasladado a X: 5, Y: 0, Z: 2[cite: 1].</li>
+          <li><strong>Punta:</strong> Cilindro (Radius: 15, H: 2) trasladado a X: 25, Y: 0, Z: 2[cite: 1].</li>
+        </ul>
+
+        <!-- Captura de referencia Fase 1 -->
+        <div class="bg-slate-900 rounded-xl p-3 border border-slate-800 text-center">
+          <p class="text-xs text-slate-300 font-semibold mb-2 flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-code text-blue-400"></i> Referencia visual de bloques (Fase 1)
+          </p>
+          <img src="image_232804.png" alt="Bloques Fase 1 Tinkercad" class="mx-auto rounded-lg max-h-72 object-contain border border-slate-700 shadow-md">
+        </div>
+      </section>
+
+      <!-- Fase 2 -->
+      <section class="border border-slate-200 rounded-xl p-5 hover:border-blue-400 transition bg-white space-y-3">
+        <div class="flex items-center justify-between">
+          <h2 class="text-base font-bold text-slate-800 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-black">2</span>
+            Fase 2: Empeine y perfilado
+          </h2>
+          <span class="bg-blue-100 text-blue-800 text-xs font-extrabold px-3 py-1 rounded-full">20%</span>
+        </div>
+        <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5 list-disc list-inside bg-slate-50 p-3.5 rounded-lg border border-slate-100">
+          <li>Añade un techo redondeado (Round Roof), rota 90° en Z, escala a X: 2.2, Y: 1.4, Z: 1.5 y traslada a X: 4, Y: 0, Z: 10.</li>
+          <li>Aplica bloques cúbicos transparentes (Hole) para recortar talón y empeine[cite: 2].</li>
+          <li>Inserta el primer bloque Group Selection[cite: 2].</li>
+        </ul>
+      </section>
+
+      <!-- Fase 3 -->
+      <section class="border border-slate-200 rounded-xl p-5 hover:border-blue-400 transition bg-white space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="text-base font-bold text-slate-800 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-black">3</span>
+            Fase 3: Caña y vaciado del interior
+          </h2>
+          <span class="bg-blue-100 text-blue-800 text-xs font-extrabold px-3 py-1 rounded-full">20%</span>
+        </div>
+        <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5 list-disc list-inside bg-slate-50 p-3.5 rounded-lg border border-slate-100">
+          <li>Cilindro caña exterior: Radius: 13, H: 35, escala X: 1.5, Y: 1, Z: 1 en X: -10, Y: 0, Z: 20[cite: 2].</li>
+          <li>Cilindro vaciado interior (Hole): Radius: 10, H: 35, escala X: 1.5, Y: 1, Z: 1 en X: -10, Y: 0, Z: 20[cite: 2].</li>
+          <li>Bloque final Group Selection para consolidar el hueco interior[cite: 2, 3].</li>
+        </ul>
+
+        <!-- Captura de referencia Fases 2 y 3 -->
+        <div class="bg-slate-900 rounded-xl p-3 border border-slate-800 text-center">
+          <p class="text-xs text-slate-300 font-semibold mb-2 flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-code text-indigo-400"></i> Referencia visual de bloques (Fases 2 y 3)
+          </p>
+          <img src="image_232861.png" alt="Bloques Fases 2 y 3 Tinkercad" class="mx-auto rounded-lg max-h-80 object-contain border border-slate-700 shadow-md">
+        </div>
+      </section>
+
+      <!-- Fase 4 -->
+      <section class="border-2 border-indigo-200 bg-indigo-50/40 rounded-xl p-5 space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="text-base font-bold text-indigo-950 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xs font-black">4</span>
+            Fase 4: Reto de Análisis y Personalización de Color
+          </h2>
+          <span class="bg-indigo-600 text-white text-xs font-extrabold px-3 py-1 rounded-full">40%</span>
+        </div>
+
+        <p class="text-xs sm:text-sm text-indigo-900 bg-indigo-100/70 p-3 rounded-lg leading-relaxed">
+          <strong>Instrucción Especial:</strong> Por defecto, el diseño original resulta en una bota naranja como se muestra abajo[cite: 2, 3]. Tu objetivo es que <strong>el modelo final sea de color AZUL</strong>, manteniendo intacta la geometría, las formas y las perforaciones. Identifica qué bloques imponen el color resultante y sustitúyelos por el tono azul.
+        </p>
+
+        <!-- Captura de la bota 3D de referencia -->
+        <div class="bg-white rounded-xl p-3 border border-indigo-200 text-center shadow-sm">
+          <p class="text-xs text-slate-600 font-semibold mb-2 flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-eye text-indigo-600"></i> Modelo geométrico de referencia (Debe ser cambiado a AZUL)
+          </p>
+          <img src="image_232882.png" alt="Modelo 3D Bota Tinkercad" class="mx-auto rounded-lg max-h-52 object-contain border border-slate-200">
+        </div>
+
+        <div class="space-y-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">
+              1. ¿En qué bloques del código se define el color final del objeto al consolidarse? (Indica el tipo de bloque o paso exacto):
+            </label>
+            <textarea id="answer1" required rows="2" placeholder="Escribe tu respuesta aquí..."
+              class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 outline-none bg-white"></textarea>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">
+              2. ¿Por qué cambiar de color las piezas individuales antes de un Group Selection a veces no altera el color final si la opción de grupo tiene un color asignado?
+            </label>
+            <textarea id="answer2" required rows="2" placeholder="Explica la jerarquía de agrupación..."
+              class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 outline-none bg-white"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- Área de carga a Google Drive -->
+      <div class="bg-slate-50 border-2 border-dashed border-slate-300 rounded-xl p-6 text-center">
+        <i class="fa-solid fa-cloud-arrow-up text-3xl text-blue-600 mb-2"></i>
+        <h3 class="text-sm font-bold text-slate-700">Subir entrega a Google Drive</h3>
+        <p class="text-xs text-slate-500 mb-3">Adjunta el archivo del ejercicio (.stl, imagen o captura de pantalla de los bloques)</p>
+        <input type="file" id="fileUpload" required
+          class="block w-full max-w-xs mx-auto text-xs text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer">
+      </div>
+
+      <!-- Botón de Envío -->
+      <button type="submit" id="submitBtn"
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-sm">
+        <i class="fa-solid fa-paper-plane"></i>
+        <span>Enviar Examen y Subir a Drive</span>
+      </button>
+
+      <!-- Mensaje de Estado -->
+      <div id="statusMessage" class="hidden p-4 rounded-xl text-center text-sm font-semibold"></div>
+
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('examDate').valueAsDate = new Date();
+
+    // URL configurada de tu Google Apps Script
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxz5Q7cN2gt89Rq0cWiW2k-giIrS12KGk75UmNfn2w0VV9S2ySUGuuCt-ywZIopjjtl/exec";
+
+    const form = document.getElementById('examForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const statusMessage = document.getElementById('statusMessage');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Subiendo a Google Drive...';
+
+      const fileInput = document.getElementById('fileUpload');
+      const file = fileInput.files[0];
+
+      const toBase64 = f => new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(f);
+        reader.onload = () => resolve(reader.result.split(',')[1]);
+        reader.onerror = error => reject(error);
+      });
+
+      try {
+        const base64File = await toBase64(file);
+
+        const payload = {
+          name: document.getElementById('studentName').value,
+          grade: document.getElementById('studentGrade').value,
+          date: document.getElementById('examDate').value,
+          answer1: document.getElementById('answer1').value,
+          answer2: document.getElementById('answer2').value,
+          fileName: `${document.getElementById('studentName').value}_${file.name}`.replace(/\s+/g, '_'),
+          fileMimeType: file.type || 'application/octet-stream',
+          fileData: base64File
+        };
+
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain' },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (result.status === "success") {
+          statusMessage.className = "p-4 rounded-xl text-center text-sm font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 block";
+          statusMessage.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> ¡Examen y archivo subidos con éxito a tu carpeta de Google Drive!';
+          form.reset();
+          document.getElementById('examDate').valueAsDate = new Date();
+        } else {
+          throw new Error(result.message);
+        }
+      } catch (err) {
+        statusMessage.className = "p-4 rounded-xl text-center text-sm font-semibold bg-rose-50 text-rose-800 border border-rose-200 block";
+        statusMessage.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-rose-600 mr-1"></i> Error al subir el examen. Intenta de nuevo o verifica la conexión.';
+        console.error(err);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Enviar Examen y Subir a Drive';
+      }
+    });
+  </script>
+</body>
+</html>
